@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 87vh;
+  height: 85vh;
   display: flex;
   position: relative;
+  overflow: hidden;
 `;
 
 export const ArrowContainer = styled.div`
@@ -19,7 +20,7 @@ export const ArrowContainer = styled.div`
   position: absolute;
   left: ${({ direction }) => direction === "left" && "10px"};
   right: ${({ direction }) => direction === "right" && "10px"};
-  /* z-index: 1; */
+  z-index: 1;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -27,8 +28,15 @@ export const ArrowContainer = styled.div`
   opacity: 0.5;
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  height: 100%;
+  transform: translateX(${props => props.sliderIndex * -100}vw);
+  transition: transform 0.5s ease;
+`;
+
 export const Slide = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   /* height: 100%; */
   align-items: center;

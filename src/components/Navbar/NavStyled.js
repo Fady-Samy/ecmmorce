@@ -27,7 +27,10 @@ export const SearchContainer = styled.div`
   align-items: center;
 `;
 
-export const InputField = styled.input`border: none;`;
+export const InputField = styled.input`
+  border: none;
+  outline: none;
+`;
 
 export const LogoSection = styled.div`
   flex: 1;
