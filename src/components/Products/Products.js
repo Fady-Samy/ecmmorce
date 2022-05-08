@@ -12,25 +12,29 @@ import {
 import { FavoriteBorderOutlined, SearchOutlined } from "@mui/icons-material";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 
+import { NavLink } from "../../GlobalStyles";
+
 export const Products = () => {
   return (
     <Container>
       {products.map((product, index) => {
         return (
-          <Product key={index}>
-            <Image src={product.img} />
-            <HoverButtons>
-              <Icon>
-                <ShoppingCartOutlined />
-              </Icon>
-              <Icon>
-                <SearchOutlined />
-              </Icon>
-              <Icon>
-                <FavoriteBorderOutlined />
-              </Icon>
-            </HoverButtons>
-          </Product>
+          <NavLink to="/product">
+            <Product key={index}>
+              <Image src={product.img} />
+              <HoverButtons>
+                <Icon>
+                  <ShoppingCartOutlined />
+                </Icon>
+                <Icon>
+                  <SearchOutlined />
+                </Icon>
+                <Icon>
+                  <FavoriteBorderOutlined />
+                </Icon>
+              </HoverButtons>
+            </Product>
+          </NavLink>
         );
       })}
     </Container>

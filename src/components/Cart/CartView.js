@@ -99,6 +99,7 @@ export const CartView = () => {
           {summary.map((item, index) => {
             return (
               <SummaryItem
+                key={index}
                 type={
                   item.text.toString().toLowerCase() === "total" ? "total" : ""
                 }

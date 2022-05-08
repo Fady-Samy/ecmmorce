@@ -44,7 +44,7 @@ export const ProductView = () => {
           <Filter>
             <FilterText>Color</FilterText>
             {availableColors.map((color, index) => {
-              return <FilterColor color={color} />;
+              return <FilterColor key={index} color={color} />;
             })}
           </Filter>
           <Filter>

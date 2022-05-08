@@ -9,6 +9,8 @@ import {
   Title
 } from "./CategorieStyled";
 
+import { NavLink } from "../../GlobalStyles";
+
 export const Categories = () => {
   return (
     <Container>
@@ -20,7 +22,9 @@ export const Categories = () => {
               <Title>
                 {category.title}
               </Title>
-              <Button>SHOP NOW</Button>
+              <NavLink to="/category">
+                <Button>SHOP NOW</Button>
+              </NavLink>
             </Info>
           </Category>
         );
