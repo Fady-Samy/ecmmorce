@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 50px 10px 0 10px;
+  margin-top: 50px;
 `;
 
 export const Product = styled.div`
   flex: 1;
   margin: 5px;
   min-width: 280px;
-  height: 350px;
+  height: 320px;
   position: relative;
   background-color: #f5fbfd;
 `;
@@ -18,7 +18,7 @@ export const Product = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const HoverButtons = styled.div`

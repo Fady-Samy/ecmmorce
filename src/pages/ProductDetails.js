@@ -4,14 +4,15 @@ import { Announcement } from "../components/Announcement/Announcement";
 import { Filters } from "../components/Filters/Filters";
 
 import { Footer } from "../components/Footer/Footer";
-import { ProductView } from "../components/ProductView/ProductView";
 
-export const Product = () => {
+import { WithRouter } from "../components/UtilsComponent/WithRouter";
+
+export const ProductDetails = () => {
   return (
     <div>
       <Navbar />
       <Announcement />
-      <ProductView />
+      <WithRouter />
       <Footer />
     </div>
   );
