@@ -25,10 +25,10 @@ export function handleInitialData() {
   };
 }
 
-export function handleProductsData() {
+export function handleProductsData(productsType) {
   return dispatch => {
     //Getting the products data from api
-    return getPopularProducts().then(({ products }) => {
+    return getPopularProducts(productsType).then(products => {
       // console.log("check 2 ");
       // console.log(products);
       //Then with the reducer we put the data in the state

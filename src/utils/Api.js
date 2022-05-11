@@ -16,7 +16,7 @@ export function getInitialData() {
 }
 
 export function getPopularProducts(productsType) {
-  return Promise.resolve(_getPopularProducts()).then(products => ({
+  return Promise.resolve(_getPopularProducts(productsType)).then(products => ({
     products
   }));
 }

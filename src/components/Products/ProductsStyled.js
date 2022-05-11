@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 50px;
 `;
 
 export const Product = styled.div`
   flex: 1;
   margin: 5px;
-  min-width: 280px;
+  width: 280px;
   height: 320px;
   position: relative;
   background-color: #f5fbfd;

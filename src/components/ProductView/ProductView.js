@@ -22,35 +22,30 @@ import {
 } from "./ProductViewStyled";
 
 import { connect } from "react-redux";
-import { WithRouter } from "../UtilsComponent/WithRouter";
 
 class ProductView extends Component {
   render() {
-    const availableColors = ["black", "blue", "gray"];
-    const sizeFilter = ["XS", "S", "M", "L", "XL", "XXL"];
+    const { selectedProduct } = this.props;
 
-    //Getting the id of the product to view from URL using useParams Hook
-    const { useParams, products } = this.props;
-    const id = useParams.id;
     return (
       <Container>
         <ProductImageContainer>
-          <Image src={products[id].img} />
+          <Image src={selectedProduct.img} />
         </ProductImageContainer>
         <ProductInfoContainer>
           <Name>
-            {products[id].name}
+            {selectedProduct.name}
           </Name>
           <Description>
-            {products[id].description}
+            {selectedProduct.description}
           </Description>
           <Price>
-            $ {products[id].price}
+            $ {selectedProduct.price}
           </Price>
           <FiltersContainer>
             <Filter>
               <FilterText>Color</FilterText>
-              {products[id].colors.map((color, index) => {
+              {selectedProduct.colors.map((color, index) => {
                 return <FilterColor key={index} color={color} />;
               })}
             </Filter>
@@ -60,7 +55,7 @@ class ProductView extends Component {
                 <Option selected disabled>
                   Size
                 </Option>
-                {products[id].sizes.map((size, index) => {
+                {selectedProduct.sizes.map((size, index) => {
                   return (
                     <Option key={index}>
                       {size}
@@ -89,8 +84,27 @@ class ProductView extends Component {
   }
 }
 function mapStateToProps({ products }, props) {
+  //Getting the product with the id from URL using useParams Hook to view
+  let productsArray = products.products;
+  let selectedProduct;
+  console.log("check id");
+  console.log(props.useParams.id);
+  if (productsArray) {
+    for (let i = 0; i < productsArray.length; i++) {
+      console.log("inside for");
+      if (productsArray[i].id == props.useParams.id) {
+        console.log("inside if");
+        selectedProduct = productsArray[i];
+        break;
+      }
+    }
+  }
+
+  console.log("found");
+  console.log(selectedProduct);
+
   return {
-    products: products,
+    selectedProduct: selectedProduct,
     useParams: props.useParams
   };
 }

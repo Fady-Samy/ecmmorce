@@ -1,15 +1,19 @@
-// import {saveLikeToggle,saveTweet} from '../utils/api'
 import { showLoading, hideLoading } from "react-redux-loading";
 
-// export const TOGGLE_TWEET = 'TOGGLE_TWEET'
-// export const ADD_TWEET = 'ADD_TWEET'
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
+export const EMPTY_PRODUCTS = "EMPTY_PRODUCTS";
 
 //action creator (elly event elly bygeblna el products)
 export function receiveProducts(products) {
   return {
     type: RECEIVE_PRODUCTS,
     products
+  };
+}
+
+export function emptyProducts() {
+  return {
+    type: EMPTY_PRODUCTS
   };
 }
 

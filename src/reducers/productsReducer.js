@@ -1,4 +1,4 @@
-import { RECEIVE_PRODUCTS } from "../actions/productsAction";
+import { RECEIVE_PRODUCTS, EMPTY_PRODUCTS } from "../actions/productsAction";
 
 export default function products(state = {}, action) {
   switch (action.type) {
@@ -7,6 +7,8 @@ export default function products(state = {}, action) {
         ...state,
         ...action.products
       };
+    case EMPTY_PRODUCTS:
+      return {};
     // case TOGGLE_TWEET:
     //   return {
     //     ...state,

@@ -18,7 +18,7 @@ class App extends Component {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/category" element={<ProductList />} />
+          <Route path="/categories/:name" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </BrowserRouter>

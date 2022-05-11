@@ -22,7 +22,7 @@ export const Categories = () => {
               <Title>
                 {category.title}
               </Title>
-              <NavLink to="/category">
+              <NavLink to={`/categories/${category.name}`}>
                 <Button>SHOP NOW</Button>
               </NavLink>
             </Info>
