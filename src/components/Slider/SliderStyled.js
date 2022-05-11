@@ -59,7 +59,7 @@ export const InfoContainer = styled.div`
   padding: 50px;
 `;
 
-export const Titile = styled.h1`font-size: 70px;`;
+export const Title = styled.h1`font-size: 70px;`;
 export const Description = styled.p`
   font-size: 20px;
   letter-spacing: 3px;

@@ -14,7 +14,7 @@ import {
   ImageContainer,
   InfoContainer,
   Slide,
-  Titile,
+  Title,
   Wrapper
 } from "./SliderStyled";
 
@@ -46,9 +46,9 @@ export const Slider = () => {
                 <Image src={slide.img} />
               </ImageContainer>
               <InfoContainer>
-                <Titile>
+                <Title>
                   {slide.title}
-                </Titile>
+                </Title>
                 <Description>
                   {slide.description}
                 </Description>

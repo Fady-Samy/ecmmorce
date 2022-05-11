@@ -5,7 +5,7 @@ import { handleProductsData } from "../../actions/sharedAction";
 import { emptyProducts } from "../../actions/productsAction";
 import { PaginatedItems } from "../UtilsComponent/PaginatedItems";
 
-import { Container } from "./ProductsStyled";
+import { Container, Title } from "./ProductsStyled";
 
 import { NavLink } from "../../GlobalStyles";
 import { Product } from "./Product";
@@ -34,14 +34,17 @@ class ProductsContainer extends Component {
     //In the home page no pagination needed
     return useParams.name
       ? <PaginatedItems productsPerPage={8} products={products} />
-      : <Container>
-          {products &&
-            products.map((product, index) =>
-              <NavLink to={`/product/${product.id}`} key={index}>
-                <Product product={product} />
-              </NavLink>
-            )}
-        </Container>;
+      : <div>
+          <Title>POPULAR PRODUCTS</Title>
+          <Container>
+            {products &&
+              products.map((product, index) =>
+                <NavLink to={`/product/${product.id}`} key={index}>
+                  <Product product={product} />
+                </NavLink>
+              )}
+          </Container>
+        </div>;
   }
 }
 

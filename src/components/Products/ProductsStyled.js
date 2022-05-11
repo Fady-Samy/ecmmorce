@@ -7,6 +7,12 @@ export const Container = styled.div`
   /* margin-top: 50px; */
 `;
 
+export const Title = styled.p`
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+`;
+
 export const ProductItem = styled.div`
   flex: 1;
   margin: 5px;
@@ -25,22 +31,38 @@ export const Image = styled.img`
   object-fit: contain;
 `;
 
-export const HoverButtons = styled.div`
+export const OverlaySection = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
+  height: 15%;
+  bottom: 0;
+  overflow: hidden;
   /* left: 0; */
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+
+  &:hover {
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+`;
+
+export const Info = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 0 20px;
+`;
+export const ProductName = styled.p`
+  color: white;
+  font-weight: 500;
+`;
+
+export const ProductPrice = styled.span`color: white;`;
+
+export const Icons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 0.5s ease;
-
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 export const Icon = styled.div`
