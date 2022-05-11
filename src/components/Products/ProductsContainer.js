@@ -11,8 +11,8 @@ import { NavLink } from "../../GlobalStyles";
 import { Product } from "./Product";
 
 class ProductsContainer extends Component {
-  componentDidMount() {
-    // console.log("Products Mounted");
+  componentWillMount() {
+    // console.log("Product Container Will Mount");
     //Getting the type of products to show from url (in home page it is empty or specific category in selected category)
     const { useParams } = this.props;
     //in the home page the name of category is empty so this will be the case for popular products
@@ -23,13 +23,17 @@ class ProductsContainer extends Component {
     this.props.dispatch(handleProductsData(productsType));
   }
   render() {
-    const { products, useParams } = this.props;
-    console.log("name from params");
-    console.log(useParams.name);
+    // console.log("Product Container Render");
 
-    //In th home page no pagination needed
+    const { products, useParams } = this.props;
+    // console.log("name from params");
+    // console.log(useParams.name);
+
+    // console.log("products here2");
+    // console.log(products);
+    //In the home page no pagination needed
     return useParams.name
-      ? <PaginatedItems productsPerPage={10} products={products} />
+      ? <PaginatedItems productsPerPage={8} products={products} />
       : <Container>
           {products &&
             products.map((product, index) =>
@@ -46,7 +50,7 @@ function mapStateToProps({ products }, props) {
   //the first products is the name of the reducer in the index file of reducers
   //the second one is the array we put in the state with the reducer
   let productsArray = products.products;
-  // console.log("product component, lenght");
+  // console.log("Getting products from store");
   // console.log(Array.isArray(products.products));
   // console.log(products.products);
   // console.log(products.products ? products.products.length : "");

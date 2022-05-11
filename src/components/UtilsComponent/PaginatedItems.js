@@ -5,11 +5,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
 import { Container } from "../Products/ProductsStyled";
-
 import { Product } from "../Products/Product";
-
-import { FavoriteBorderOutlined, SearchOutlined } from "@mui/icons-material";
-import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import { NavLink } from "../../GlobalStyles";
 
 export function PaginatedItems({ productsPerPage, products }) {
@@ -17,15 +13,18 @@ export function PaginatedItems({ productsPerPage, products }) {
   const [pageCount, setPageCount] = useState(0);
   const [productOffset, setProductOffset] = useState(0);
 
+  // console.log("Products recieved at paginated");
+  // console.log(products);
   useEffect(
     () => {
+      // console.log("inside useEffect");
       // Fetch items from another resources.
       const endOffset = productOffset + productsPerPage;
       console.log(`Loading items from ${productOffset} to ${endOffset}`);
       products && setCurrentProducts(products.slice(productOffset, endOffset));
       products && setPageCount(Math.ceil(products.length / productsPerPage));
     },
-    [productOffset, productsPerPage]
+    [products, productOffset, productsPerPage]
   );
 
   // Invoke when user click to request another page.
@@ -40,7 +39,6 @@ export function PaginatedItems({ productsPerPage, products }) {
   return (
     <Fragment>
       <Items currentProducts={currentProducts} />
-      {/* All classes from bootstrap */}
       <ReactPaginate
         breakLabel="..."
         nextLabel={<NavigateNextIcon />}
@@ -49,6 +47,7 @@ export function PaginatedItems({ productsPerPage, products }) {
         pageCount={pageCount}
         previousLabel={<NavigateBeforeIcon />}
         renderOnZeroPageCount={null}
+        // All classes from bootstrap
         containerClassName="pagination justify-content-center"
         previousClassName="page-item me-2 " //li
         previousLinkClassName="page-link" //a
@@ -63,6 +62,8 @@ export function PaginatedItems({ productsPerPage, products }) {
 }
 
 function Items({ currentProducts }) {
+  // console.log("Current Product in Items");
+  // console.log(currentProducts);
   return (
     <Container>
       {currentProducts &&

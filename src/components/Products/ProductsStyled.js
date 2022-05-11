@@ -3,22 +3,25 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
+  margin-left: 2.8vw;
+  /* margin-top: 50px; */
 `;
 
 export const ProductItem = styled.div`
   flex: 1;
   margin: 5px;
   width: 280px;
-  height: 320px;
-  position: relative;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f5fbfd;
+  position: relative;
 `;
 
 export const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 75%;
   object-fit: contain;
 `;
 
