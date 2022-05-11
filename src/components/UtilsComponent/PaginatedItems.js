@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import Products from "../Products/Products";
-import { WithRouter } from "./WithRouter";
 
 import {
   Container,
@@ -13,6 +11,8 @@ import {
 
 import { FavoriteBorderOutlined, SearchOutlined } from "@mui/icons-material";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
 import { NavLink } from "../../GlobalStyles";
 
@@ -44,14 +44,23 @@ export function PaginatedItems({ productsPerPage, products }) {
   return (
     <Fragment>
       <Items currentProducts={currentProducts} />
+      {/* All classes from bootstrap */}
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel={<NavigateNextIcon />}
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel={<NavigateBeforeIcon />}
         renderOnZeroPageCount={null}
+        containerClassName="pagination justify-content-center"
+        previousClassName="page-item me-2 " //li
+        previousLinkClassName="page-link" //a
+        pageClassName="page-item me-2" //li
+        pageLinkClassName="page-link" //a
+        nextClassName=" page-item" //li
+        nextLinkClassName="page-link" //a
+        activeClassName="active"
       />
     </Fragment>
   );
