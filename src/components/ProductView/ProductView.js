@@ -87,21 +87,21 @@ function mapStateToProps({ products }, props) {
   //Getting the product with the id from URL using useParams Hook to view
   let productsArray = products.products;
   let selectedProduct;
-  console.log("check id");
-  console.log(props.useParams.id);
+  // console.log("check id");
+  // console.log(props.useParams.id);
   if (productsArray) {
     for (let i = 0; i < productsArray.length; i++) {
-      console.log("inside for");
+      // console.log("inside for");
       if (productsArray[i].id == props.useParams.id) {
-        console.log("inside if");
+        // console.log("inside if");
         selectedProduct = productsArray[i];
         break;
       }
     }
   }
 
-  console.log("found");
-  console.log(selectedProduct);
+  // console.log("found");
+  // console.log(selectedProduct);
 
   return {
     selectedProduct: selectedProduct,

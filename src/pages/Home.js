@@ -4,7 +4,7 @@ import { Categories } from "../components/Categories/Categories";
 import { Footer } from "../components/Footer/Footer";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Newsletter } from "../components/Newletter/Newsletter";
-import Products from "../components/Products/Products";
+import ProductsContainer from "../components/Products/ProductsContainer";
 import { Slider } from "../components/Slider/Slider";
 import { WithRouter } from "../components/UtilsComponent/WithRouter";
 export const Home = () => {
@@ -14,7 +14,7 @@ export const Home = () => {
       <Navbar />
       <Slider />
       <Categories />
-      <WithRouter WrappedComponent={Products} />
+      <WithRouter WrappedComponent={ProductsContainer} />
       <Newsletter />
       <Footer />
     </div>

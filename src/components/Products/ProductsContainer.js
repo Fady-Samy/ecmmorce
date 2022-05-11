@@ -5,8 +5,14 @@ import { handleProductsData } from "../../actions/sharedAction";
 import { emptyProducts } from "../../actions/productsAction";
 import { PaginatedItems } from "../UtilsComponent/PaginatedItems";
 
-class Products extends Component {
+import { Container } from "./ProductsStyled";
+
+import { NavLink } from "../../GlobalStyles";
+import { Product } from "./Product";
+
+class ProductsContainer extends Component {
   componentDidMount() {
+    // console.log("Products Mounted");
     //Getting the type of products to show from url (in home page it is empty or specific category in selected category)
     const { useParams } = this.props;
     //in the home page the name of category is empty so this will be the case for popular products
@@ -17,9 +23,21 @@ class Products extends Component {
     this.props.dispatch(handleProductsData(productsType));
   }
   render() {
-    const { productsIds, products } = this.props;
+    const { products, useParams } = this.props;
+    console.log("name from params");
+    console.log(useParams.name);
 
-    return <PaginatedItems productsPerPage={2} products={products} />;
+    //In th home page no pagination needed
+    return useParams.name
+      ? <PaginatedItems productsPerPage={10} products={products} />
+      : <Container>
+          {products &&
+            products.map((product, index) =>
+              <NavLink to={`/product/${product.id}`} key={index}>
+                <Product product={product} />
+              </NavLink>
+            )}
+        </Container>;
   }
 }
 
@@ -38,4 +56,4 @@ function mapStateToProps({ products }, props) {
   };
 }
 
-export default connect(mapStateToProps)(Products);
+export default connect(mapStateToProps)(ProductsContainer);

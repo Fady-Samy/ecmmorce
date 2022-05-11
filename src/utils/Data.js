@@ -182,6 +182,114 @@ let shirtsProducts = [
     img:
       "https://static.vecteezy.com/system/resources/previews/002/106/452/large_2x/fashion-shirt-on-white-background-free-photo.jpg",
     likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 7,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/mens-shirt-picture-id488160041?k=20&m=488160041&s=612x612&w=0&h=OH_-skyES8-aeTvDQHdVDZ6GKLsqp6adFJC8u6O6_UY=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 8,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/shirt-isolated-white-picture-id1083383944?k=20&m=1083383944&s=612x612&w=0&h=m5dh7kTdW5msm43Ne1Lqn_eglRzt9x-x0QWMnddxFz4=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 9,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/red-plaid-shirt-picture-id498852901?k=20&m=498852901&s=612x612&w=0&h=eMSXW6GDPLsVb39C_V8Uc245jPNDZzDMWxdPVE4y9Tc=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 10,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/white-tshirt-isolated-on-white-picture-id592689778?k=20&m=592689778&s=612x612&w=0&h=ygyeuqjsgjTTZDzK3RK5sI3gzlyBGQ_tSeqvlkp-3JQ=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 11,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/blue-flannel-shirt-picture-id184962348?k=20&m=184962348&s=612x612&w=0&h=FEKDhbm3bnOyPEELZMPmOrxqcsVZDiR4-bUeWWxl_Qk=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 12,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/blue-blank-jeans-and-business-shirt-picture-id1179272851?k=20&m=1179272851&s=612x612&w=0&h=N6rLF0nHRqXXwhYpItgJgPLGaCh5MwZ1qXthd8XfnU8=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 13,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/close-up-of-the-business-shirt-picture-id963398596?k=20&m=963398596&s=612x612&w=0&h=-mp0euYaNZxRSIUaH2X-L9_vi5hqg7xuRC9ENu6ZXBE=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 14,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/blue-shirt-isolated-on-white-background-picture-id500462876?k=20&m=500462876&s=612x612&w=0&h=6N_LqazFMdcnWkXOfuc0O6r_jVdTXb1CFfEuWDXic50=",
+    likes: ["user1", "user1", "user1", "user1"]
+  },
+  {
+    id: 15,
+    name: "BlueWhite Squares",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
+    price: "45",
+    colors: ["black", "blue", "gray"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    img:
+      "https://media.istockphoto.com/photos/black-classic-and-business-shirt-with-button-picture-id1264302718?k=20&m=1264302718&s=612x612&w=0&h=l8JbV84L1mbOkIxXuxa33myzVMYcG14Q6YHhYWjTMHQ=",
+    likes: ["user1", "user1", "user1", "user1"]
   }
 ];
 
@@ -392,15 +500,15 @@ export function _getPopularProducts(productsType) {
   return new Promise((res, rej) => {
     switch (productsType) {
       case "":
-        console.log("popular");
+        // console.log("popular");
         setTimeout(() => res([...popularProducts]), 1000);
         break;
       case "shirts":
-        console.log("shirts");
+        // console.log("shirts");
         setTimeout(() => res([...shirtsProducts]), 1000);
         break;
       case "loungwear":
-        console.log("loungwear");
+        // console.log("loungwear");
         break;
       default:
         break;

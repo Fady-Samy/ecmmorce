@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-top: 50px;
 `;
 
-export const Product = styled.div`
+export const ProductItem = styled.div`
   flex: 1;
   margin: 5px;
   width: 280px;

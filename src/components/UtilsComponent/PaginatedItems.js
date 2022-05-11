@@ -1,19 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-import {
-  Container,
-  HoverButtons,
-  Icon,
-  Image,
-  Product
-} from "../Products/ProductsStyled";
-
-import { FavoriteBorderOutlined, SearchOutlined } from "@mui/icons-material";
-import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
+import { Container } from "../Products/ProductsStyled";
+
+import { Product } from "../Products/Product";
+
+import { FavoriteBorderOutlined, SearchOutlined } from "@mui/icons-material";
+import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import { NavLink } from "../../GlobalStyles";
 
 export function PaginatedItems({ productsPerPage, products }) {
@@ -72,20 +68,7 @@ function Items({ currentProducts }) {
       {currentProducts &&
         currentProducts.map((product, index) =>
           <NavLink to={`/product/${product.id}`} key={index}>
-            <Product>
-              <Image src={product.img} />
-              <HoverButtons>
-                <Icon>
-                  <ShoppingCartOutlined />
-                </Icon>
-                <Icon>
-                  <SearchOutlined />
-                </Icon>
-                <Icon>
-                  <FavoriteBorderOutlined />
-                </Icon>
-              </HoverButtons>
-            </Product>
+            <Product product={product} />
           </NavLink>
         )}
     </Container>
