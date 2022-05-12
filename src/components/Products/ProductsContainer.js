@@ -10,7 +10,7 @@ import { Container, Title } from "./ProductsStyled";
 import { Product } from "./Product";
 
 class ProductsContainer extends Component {
-  componentWillMount() {
+  componentDidMount() {
     // console.log("Product Container Will Mount");
     //Getting the type of products to show from url (in home page it is empty or specific category in selected category)
     const { useParams } = this.props;

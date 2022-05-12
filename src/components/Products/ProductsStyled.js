@@ -64,20 +64,25 @@ export const Icons = styled.div`
   align-items: center;
 `;
 
-export const Icon = styled.div`
+export const Icon = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: none;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px;
   padding: 6px;
-  cursor: pointer;
   transition: all 0.5s ease;
   &:hover {
     background-color: #e9f5f5;
     transform: scale(1.1);
   }
+`;
+
+export const ActionsContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
 `;

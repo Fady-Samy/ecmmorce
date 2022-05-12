@@ -156,7 +156,7 @@ let shirtsProducts = [
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
-      "https://pngset.com/images/green-and-vintage-image-long-sleeve-shirt-aesthetic-clothing-apparel-sweatshirt-sweater-transparent-png-304064.png",
+      "https://cms.cloudinary.vpsvc.com//image/fetch/q_auto:eco,w_700,f_auto,dpr_auto/https://s3-eu-west-1.amazonaws.com/sitecore-media-bucket/prod%2Fen%2F%7B41ED0F83-1DC4-4568-B273-4DBCCE756419%7D",
     likes: ["user1", "user1", "user1"]
   },
   {
@@ -501,7 +501,7 @@ export function _getPopularProducts(productsType) {
     switch (productsType) {
       case "":
         // console.log("popular");
-        setTimeout(() => res([...popularProducts]), 5000);
+        setTimeout(() => res([...popularProducts]), 1000);
         break;
       case "shirts":
         // console.log("shirts");

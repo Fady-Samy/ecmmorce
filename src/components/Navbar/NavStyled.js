@@ -35,6 +35,7 @@ export const InputField = styled.input`
 export const LogoSection = styled.div`
   flex: 1;
   text-align: center;
+  margin-top: 15px;
 `;
 export const Logo = styled.h1``;
 

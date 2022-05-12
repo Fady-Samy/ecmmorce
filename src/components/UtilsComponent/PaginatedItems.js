@@ -67,11 +67,7 @@ function Items({ currentProducts }) {
   return (
     <Container>
       {currentProducts &&
-        currentProducts.map((product, index) =>
-          <NavLink to={`/product/${product.id}`} key={index}>
-            <Product product={product} />
-          </NavLink>
-        )}
+        currentProducts.map((product, index) => <Product product={product} />)}
     </Container>
   );
 }

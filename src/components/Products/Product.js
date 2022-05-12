@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   OverlaySection,
@@ -8,19 +8,49 @@ import {
   ProductItem,
   Info,
   ProductName,
-  ProductPrice
+  ProductPrice,
+  ActionsContainer
 } from "./ProductsStyled";
 import { FavoriteBorderOutlined, SearchOutlined } from "@mui/icons-material";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
-import { Skeleton } from "@mui/material";
+import { Alert, Button, IconButton, Skeleton, Snackbar } from "@mui/material";
 
 import { NavLink } from "../../GlobalStyles";
+import CloseIcon from "@mui/icons-material/Close";
 
 export const Product = ({ product }) => {
+  const [open, setOpen] = useState(false);
+
+  const AddToCart = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const snackActions = (
+    <ActionsContainer>
+      <Button style={{ color: "white" }} size="small" onClick={handleClose}>
+        UNDO
+      </Button>
+      <IconButton aria-label="close" color="inherit" onClick={handleClose}>
+        <CloseIcon
+          style={{
+            fontSize: "small"
+          }}
+        />
+      </IconButton>
+    </ActionsContainer>
+  );
+
   return (
     <ProductItem>
       {product
-        ? <NavLink to={`/product/${product.id}`}>
+        ? <NavLink
+            to={`/product/${product.id}`}
+            style={{ display: "flex", alignItems: "center", height: "100%" }}
+          >
             <Image src={product.img} />
           </NavLink>
         : <Skeleton
@@ -56,7 +86,7 @@ export const Product = ({ product }) => {
         </Info>
         {product &&
           <Icons>
-            <Icon>
+            <Icon onClick={AddToCart}>
               <ShoppingCartOutlined />
             </Icon>
 
@@ -65,6 +95,22 @@ export const Product = ({ product }) => {
             </Icon>
           </Icons>}
       </OverlaySection>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        // action={snackActions}
+      >
+        <Alert
+          severity="success"
+          variant="filled"
+          elevation={6}
+          // onClose={handleClose}
+          action={snackActions}
+        >
+          item added to your cart
+        </Alert>
+      </Snackbar>
     </ProductItem>
   );
 };
