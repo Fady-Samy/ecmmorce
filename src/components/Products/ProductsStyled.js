@@ -14,7 +14,6 @@ export const Title = styled.p`
 `;
 
 export const ProductItem = styled.div`
-  flex: 1;
   margin: 5px;
   width: 280px;
   height: 350px;

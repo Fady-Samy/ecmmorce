@@ -7,7 +7,6 @@ import { PaginatedItems } from "../UtilsComponent/PaginatedItems";
 
 import { Container, Title } from "./ProductsStyled";
 
-import { NavLink } from "../../GlobalStyles";
 import { Product } from "./Product";
 
 class ProductsContainer extends Component {
@@ -41,11 +40,7 @@ class ProductsContainer extends Component {
             <Title>POPULAR PRODUCTS</Title>
             <Container>
               {products &&
-                products.map((product, index) =>
-                  <NavLink to={`/product/${product.id}`} key={index}>
-                    <Product product={product} />
-                  </NavLink>
-                )}
+                products.map((product, index) => <Product product={product} />)}
             </Container>
           </div>
       : <div>

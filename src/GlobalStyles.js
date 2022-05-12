@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const NavLink = styled(Link)`
   color: black;
   text-decoration: none;
-  &:hover{
-    color:black ;
+  &:hover {
+    color: black;
   }
 `;

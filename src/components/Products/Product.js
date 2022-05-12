@@ -14,11 +14,15 @@ import { FavoriteBorderOutlined, SearchOutlined } from "@mui/icons-material";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import { Skeleton } from "@mui/material";
 
+import { NavLink } from "../../GlobalStyles";
+
 export const Product = ({ product }) => {
   return (
     <ProductItem>
       {product
-        ? <Image src={product.img} />
+        ? <NavLink to={`/product/${product.id}`}>
+            <Image src={product.img} />
+          </NavLink>
         : <Skeleton
             variant="rectangular"
             width={300}
@@ -34,7 +38,7 @@ export const Product = ({ product }) => {
               </ProductName>
             : <Skeleton
                 variant="text"
-                width={20}
+                width={50}
                 height={10}
                 sx={{ bgcolor: "white" }}
               />}
