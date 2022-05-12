@@ -26,23 +26,34 @@ class ProductsContainer extends Component {
     // console.log("Product Container Render");
 
     const { products, useParams } = this.props;
+    const mockItemsLoading = 8; // Or something else
+
     // console.log("name from params");
     // console.log(useParams.name);
 
     // console.log("products here2");
     // console.log(products);
-    //In the home page no pagination needed
-    return useParams.name
-      ? <PaginatedItems productsPerPage={8} products={products} />
+    //If products defined then loading is finished
+    return products
+      ? useParams.name //Then In the home page no pagination needed
+        ? <PaginatedItems productsPerPage={8} products={products} />
+        : <div>
+            <Title>POPULAR PRODUCTS</Title>
+            <Container>
+              {products &&
+                products.map((product, index) =>
+                  <NavLink to={`/product/${product.id}`} key={index}>
+                    <Product product={product} />
+                  </NavLink>
+                )}
+            </Container>
+          </div>
       : <div>
           <Title>POPULAR PRODUCTS</Title>
           <Container>
-            {products &&
-              products.map((product, index) =>
-                <NavLink to={`/product/${product.id}`} key={index}>
-                  <Product product={product} />
-                </NavLink>
-              )}
+            {[...Array(mockItemsLoading)].map((e, i) => {
+              return <Product product={null} />;
+            })}
           </Container>
         </div>;
   }

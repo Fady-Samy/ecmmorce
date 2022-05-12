@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2.8vw;
+  margin: 0 2.8vw;
   /* margin-top: 50px; */
 `;
 

@@ -501,7 +501,7 @@ export function _getPopularProducts(productsType) {
     switch (productsType) {
       case "":
         // console.log("popular");
-        setTimeout(() => res([...popularProducts]), 1000);
+        setTimeout(() => res([...popularProducts]), 5000);
         break;
       case "shirts":
         // console.log("shirts");
