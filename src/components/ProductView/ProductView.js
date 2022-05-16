@@ -22,7 +22,7 @@ import {
   Quantity
 } from "./ProductViewStyled";
 
-import { Alert, Button, IconButton, Skeleton, Snackbar } from "@mui/material";
+import { Alert, Button, IconButton, Snackbar } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { handleAddToCart } from "../../actions/cartAction";
 
@@ -49,7 +49,7 @@ function mapStateToProps({ products }, props) {
   if (productsArray) {
     for (let i = 0; i < productsArray.length; i++) {
       // console.log("inside for");
-      if (productsArray[i].id == props.useParams.id) {
+      if (productsArray[i].id === props.useParams.id) {
         // console.log("inside if");
         selectedProduct = productsArray[i];
         break;
@@ -68,7 +68,7 @@ function mapStateToProps({ products }, props) {
 
 export default connect(mapStateToProps)(ProductView);
 
-//Snackbar
+//Had to separate to use functional componet to use useState for the snackbar
 export const FuncProductView = ({ selectedProduct, dispatch }) => {
   const [open, setOpen] = useState(false);
 

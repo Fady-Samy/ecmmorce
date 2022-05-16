@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useState } from "react";
+import React, { Component, Fragment } from "react";
 import { Add, Remove } from "@mui/icons-material";
 import {
   Button,
@@ -63,7 +63,7 @@ function mapStateToProps({ cart }) {
 export default connect(mapStateToProps)(CartView);
 
 export const CartProductItems = ({ cartProducts }) => {
-  const [subtotal, setSubtotal] = useState(0);
+  // const [subtotal, setSubtotal] = useState(0);
   let subTotal = 0;
 
   const summary = [

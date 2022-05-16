@@ -1,7 +1,6 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 
 import {
-  OverlaySection,
   Icon,
   Icons,
   Image,
@@ -10,12 +9,10 @@ import {
   ProductName,
   ProductPrice
 } from "./ProductsStyled";
-import { FavoriteBorderOutlined, VisibilityRounded } from "@mui/icons-material";
-import { Alert, Button, IconButton, Skeleton, Snackbar } from "@mui/material";
+import { FavoriteBorderOutlined } from "@mui/icons-material";
+import { Skeleton } from "@mui/material";
 
 import { NavLink } from "../../GlobalStyles";
-import CloseIcon from "@mui/icons-material/Close";
-import { handleAddToCart } from "../../actions/cartAction";
 
 export const Product = ({ product, dispatch }) => {
   return (
