@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, useState } from "react";
 import { Add, Remove } from "@mui/icons-material";
 import {
   Button,
@@ -63,10 +63,13 @@ function mapStateToProps({ cart }) {
 export default connect(mapStateToProps)(CartView);
 
 export const CartProductItems = ({ cartProducts }) => {
+  const [subtotal, setSubtotal] = useState(0);
+  let subTotal = 0;
+
   const summary = [
     {
       text: "Subtotal",
-      price: "80"
+      price: ""
     },
     {
       text: "Estiamted Shipping",
@@ -78,49 +81,52 @@ export const CartProductItems = ({ cartProducts }) => {
     },
     {
       text: "Total",
-      price: "80"
+      price: ""
     }
   ];
   return (
     <ProductSummaryContainer>
       {/* Info */}
       <OrderProducts>
-        {cartProducts.map((product, inedx) =>
-          <Fragment>
-            <Product>
-              <ProductDetails>
-                <Image src={product.img} />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> {product.name}
-                  </ProductName>
-                  <ProductId>
-                    <b>Id:</b> {product.id}
-                  </ProductId>
-                  <ProductColor color="gray" />
-                  <ProductSize>
-                    <b>Size:</b> 37
-                  </ProductSize>
-                </Details>
-              </ProductDetails>
-              <PriceDetails>
-                <ProductAmountContainer>
-                  <Icon>
-                    <Remove />
-                  </Icon>
-                  <ProductAmount>1</ProductAmount>
-                  <Icon>
-                    <Add />
-                  </Icon>
-                </ProductAmountContainer>
-                <ProductPrice>
-                  ${product.price}
-                </ProductPrice>
-              </PriceDetails>
-            </Product>
-            <Hr />
-          </Fragment>
-        )}
+        {cartProducts.map((product, inedx) => {
+          subTotal += product.price;
+          return (
+            <Fragment>
+              <Product>
+                <ProductDetails>
+                  <Image src={product.img} />
+                  <Details>
+                    <ProductName>
+                      <b>Product:</b> {product.name}
+                    </ProductName>
+                    <ProductId>
+                      <b>Id:</b> {product.id}
+                    </ProductId>
+                    <ProductColor color="gray" />
+                    <ProductSize>
+                      <b>Size:</b> 37
+                    </ProductSize>
+                  </Details>
+                </ProductDetails>
+                <PriceDetails>
+                  <ProductAmountContainer>
+                    <Icon>
+                      <Remove />
+                    </Icon>
+                    <ProductAmount>1</ProductAmount>
+                    <Icon>
+                      <Add />
+                    </Icon>
+                  </ProductAmountContainer>
+                  <ProductPrice>
+                    ${product.price}
+                  </ProductPrice>
+                </PriceDetails>
+              </Product>
+              <Hr />
+            </Fragment>
+          );
+        })}
       </OrderProducts>
       {/* Summary */}
       <OrderSummary>
@@ -137,7 +143,12 @@ export const CartProductItems = ({ cartProducts }) => {
                 {item.text}
               </SummaryItemText>
               <SummaryItemPrice>
-                $ {item.price}
+                ${" "}
+                {item.text.toString().toLowerCase() === "total"
+                  ? subTotal - 5.9
+                  : item.text.toString().toLowerCase() === "subtotal"
+                    ? subTotal
+                    : item.price}
               </SummaryItemPrice>
             </SummaryItem>
           );

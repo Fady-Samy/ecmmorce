@@ -16,7 +16,7 @@ let popularProducts = [
     name: "Life is good logo Tshirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "20",
+    price: 20,
     colors: ["beige", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -28,7 +28,7 @@ let popularProducts = [
     name: "Nike sport sneakers",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "50",
+    price: 50,
     colors: ["black", "blue", "gray"],
     sizes: ["36", "37", "38", "39", "40"],
     img:
@@ -40,7 +40,7 @@ let popularProducts = [
     name: "Sea Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "36",
+    price: 36,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -52,7 +52,7 @@ let popularProducts = [
     name: "Palm Trees Dress",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "35",
+    price: 35,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -64,7 +64,7 @@ let popularProducts = [
     name: "Hawaii bag",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "15",
+    price: 15,
     colors: ["black", "blue", "gray"],
     sizes: ["60x60", "90x90"],
     img:
@@ -76,7 +76,7 @@ let popularProducts = [
     name: "Dog Hat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "10",
+    price: 10,
     colors: ["black", "blue", "gray"],
     sizes: ["S", "M", "L"],
     img:
@@ -88,7 +88,7 @@ let popularProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -100,7 +100,7 @@ let popularProducts = [
     name: "Long Jacket",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "75",
+    price: 75,
     colors: ["brown", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -116,7 +116,7 @@ let shirtsProducts = [
     name: "Life is good logo Tshirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "20",
+    price: 20,
     colors: ["beige", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -128,7 +128,7 @@ let shirtsProducts = [
     name: "Green Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "50",
+    price: 50,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -140,7 +140,7 @@ let shirtsProducts = [
     name: "Sea Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "36",
+    price: 36,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -152,7 +152,7 @@ let shirtsProducts = [
     name: "Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "35",
+    price: 35,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -164,7 +164,7 @@ let shirtsProducts = [
     name: "Green Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "15",
+    price: 15,
     colors: ["black", "blue", "gray"],
     sizes: ["60x60", "90x90"],
     img:
@@ -176,7 +176,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -188,7 +188,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -200,7 +200,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -212,7 +212,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -224,7 +224,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -236,7 +236,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -248,7 +248,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -260,7 +260,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -272,7 +272,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
@@ -284,7 +284,7 @@ let shirtsProducts = [
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
-    price: "45",
+    price: 45,
     colors: ["black", "blue", "gray"],
     sizes: ["XS", "S", "M", "L", "XL"],
     img:
