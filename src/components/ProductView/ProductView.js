@@ -48,9 +48,7 @@ function mapStateToProps({ products }, props) {
   // console.log(props.useParams.id);
   if (productsArray) {
     for (let i = 0; i < productsArray.length; i++) {
-      // console.log("inside for");
-      if (productsArray[i].id === props.useParams.id) {
-        // console.log("inside if");
+      if (productsArray[i].id == props.useParams.id) {
         selectedProduct = productsArray[i];
         break;
       }
