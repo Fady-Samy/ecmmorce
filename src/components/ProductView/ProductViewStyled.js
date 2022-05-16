@@ -85,11 +85,16 @@ export const Quantity = styled.div`
   margin: 0 5px;
 `;
 
-export const Button = styled.button`
+export const AddButton = styled.button`
   border: 2px solid teal;
   padding: 15px;
   background-color: transparent;
   font-weight: 500;
   font-size: 18px;
   cursor: pointer;
+`;
+
+export const ActionsContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
 `;

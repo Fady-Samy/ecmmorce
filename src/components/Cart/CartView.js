@@ -93,6 +93,7 @@ export const CartProductItems = ({ cartProducts }) => {
           return (
             <Fragment>
               <Product>
+                {/* Product Info */}
                 <ProductDetails>
                   <Image src={product.img} />
                   <Details>
@@ -108,6 +109,7 @@ export const CartProductItems = ({ cartProducts }) => {
                     </ProductSize>
                   </Details>
                 </ProductDetails>
+                {/* Product Price and Quantity */}
                 <PriceDetails>
                   <ProductAmountContainer>
                     <Icon>

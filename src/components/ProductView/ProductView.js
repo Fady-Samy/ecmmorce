@@ -1,7 +1,8 @@
 import { Add, Remove } from "@mui/icons-material";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
-  Button,
+  AddButton,
+  ActionsContainer,
   Container,
   Description,
   Filter,
@@ -21,65 +22,21 @@ import {
   Quantity
 } from "./ProductViewStyled";
 
+import { Alert, Button, IconButton, Skeleton, Snackbar } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import { handleAddToCart } from "../../actions/cartAction";
+
 import { connect } from "react-redux";
 
 class ProductView extends Component {
   render() {
-    const { selectedProduct } = this.props;
+    const { selectedProduct, dispatch } = this.props;
+
+    // console.log("Dispatch recieved");
+    // console.log(dispatch);
 
     return (
-      <Container>
-        <ProductImageContainer>
-          <Image src={selectedProduct.img} />
-        </ProductImageContainer>
-        <ProductInfoContainer>
-          <Name>
-            {selectedProduct.name}
-          </Name>
-          <Description>
-            {selectedProduct.description}
-          </Description>
-          <Price>
-            $ {selectedProduct.price}
-          </Price>
-          <FiltersContainer>
-            <Filter>
-              <FilterText>Color</FilterText>
-              {selectedProduct.colors.map((color, index) => {
-                return <FilterColor key={index} color={color} />;
-              })}
-            </Filter>
-            <Filter>
-              <FilterText>Size</FilterText>
-              <Select>
-                <Option selected disabled>
-                  Size
-                </Option>
-                {selectedProduct.sizes.map((size, index) => {
-                  return (
-                    <Option key={index}>
-                      {size}
-                    </Option>
-                  );
-                })}
-              </Select>
-            </Filter>
-          </FiltersContainer>
-
-          <AddToCartContainer>
-            <QuantityContainer>
-              <Icon>
-                <Remove />
-              </Icon>
-              <Quantity>1</Quantity>
-              <Icon>
-                <Add />
-              </Icon>
-            </QuantityContainer>
-            <Button>Add To Cart</Button>
-          </AddToCartContainer>
-        </ProductInfoContainer>
-      </Container>
+      <FuncProductView selectedProduct={selectedProduct} dispatch={dispatch} />
     );
   }
 }
@@ -110,3 +67,103 @@ function mapStateToProps({ products }, props) {
 }
 
 export default connect(mapStateToProps)(ProductView);
+
+//Snackbar
+export const FuncProductView = ({ selectedProduct, dispatch }) => {
+  const [open, setOpen] = useState(false);
+
+  const AddToCart = () => {
+    setOpen(true);
+    dispatch(handleAddToCart(selectedProduct));
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const snackActions = (
+    <ActionsContainer>
+      <Button style={{ color: "white" }} size="small" onClick={handleClose}>
+        UNDO
+      </Button>
+      <IconButton aria-label="close" color="inherit" onClick={handleClose}>
+        <CloseIcon
+          style={{
+            fontSize: "small"
+          }}
+        />
+      </IconButton>
+    </ActionsContainer>
+  );
+  return (
+    <Container>
+      <ProductImageContainer>
+        <Image src={selectedProduct.img} />
+      </ProductImageContainer>
+      <ProductInfoContainer>
+        <Name>
+          {selectedProduct.name}
+        </Name>
+        <Description>
+          {selectedProduct.description}
+        </Description>
+        <Price>
+          $ {selectedProduct.price}
+        </Price>
+        <FiltersContainer>
+          <Filter>
+            <FilterText>Color</FilterText>
+            {selectedProduct.colors.map((color, index) => {
+              return <FilterColor key={index} color={color} />;
+            })}
+          </Filter>
+          <Filter>
+            <FilterText>Size</FilterText>
+            <Select>
+              <Option selected disabled>
+                Size
+              </Option>
+              {selectedProduct.sizes.map((size, index) => {
+                return (
+                  <Option key={index}>
+                    {size}
+                  </Option>
+                );
+              })}
+            </Select>
+          </Filter>
+        </FiltersContainer>
+
+        <AddToCartContainer>
+          <QuantityContainer>
+            <Icon>
+              <Remove />
+            </Icon>
+            <Quantity>1</Quantity>
+            <Icon>
+              <Add />
+            </Icon>
+          </QuantityContainer>
+          <AddButton onClick={AddToCart}>Add To Cart</AddButton>
+        </AddToCartContainer>
+      </ProductInfoContainer>
+      {/* Snackbar on adding product to cart */}
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        // action={snackActions}
+      >
+        <Alert
+          severity="success"
+          variant="filled"
+          elevation={6}
+          // onClose={handleClose}
+          action={snackActions}
+        >
+          item added to your cart
+        </Alert>
+      </Snackbar>
+    </Container>
+  );
+};
