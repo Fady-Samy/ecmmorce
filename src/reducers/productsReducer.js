@@ -8,6 +8,7 @@ export default function products(state = {}, action) {
       };
     case EMPTY_PRODUCTS:
       return {};
+
     // case TOGGLE_TWEET:
     //   return {
     //     ...state,

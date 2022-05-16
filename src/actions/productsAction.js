@@ -1,4 +1,5 @@
 import { showLoading, hideLoading } from "react-redux-loading";
+import { getPopularProducts } from "../utils/Api";
 
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS";
 export const EMPTY_PRODUCTS = "EMPTY_PRODUCTS";
@@ -8,6 +9,18 @@ export function receiveProducts(products) {
   return {
     type: RECEIVE_PRODUCTS,
     products
+  };
+}
+
+export function handleProductsData(productsType) {
+  return dispatch => {
+    //Getting the products data from api
+    return getPopularProducts(productsType).then(products => {
+      // console.log("check 2 ");
+      // console.log(products);
+      //Then with the reducer we put the data in the state
+      dispatch(receiveProducts(products));
+    });
   };
 }
 

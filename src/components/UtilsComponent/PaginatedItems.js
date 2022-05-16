@@ -8,7 +8,7 @@ import { Container } from "../Products/ProductsStyled";
 import { Product } from "../Products/Product";
 import { NavLink } from "../../GlobalStyles";
 
-export function PaginatedItems({ productsPerPage, products }) {
+export function PaginatedItems({ productsPerPage, products, dispatch }) {
   const [currentProducts, setCurrentProducts] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [productOffset, setProductOffset] = useState(0);
@@ -38,7 +38,7 @@ export function PaginatedItems({ productsPerPage, products }) {
 
   return (
     <Fragment>
-      <Items currentProducts={currentProducts} />
+      <Items currentProducts={currentProducts} dispatch={dispatch} />
       <ReactPaginate
         breakLabel="..."
         nextLabel={<NavigateNextIcon />}
@@ -61,13 +61,15 @@ export function PaginatedItems({ productsPerPage, products }) {
   );
 }
 
-function Items({ currentProducts }) {
+function Items({ currentProducts, dispatch }) {
   // console.log("Current Product in Items");
   // console.log(currentProducts);
   return (
     <Container>
       {currentProducts &&
-        currentProducts.map((product, index) => <Product product={product} />)}
+        currentProducts.map((product, index) =>
+          <Product key={index} product={product} dispatch={dispatch} />
+        )}
     </Container>
   );
 }

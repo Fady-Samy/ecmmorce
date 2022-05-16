@@ -17,17 +17,22 @@ import { Alert, Button, IconButton, Skeleton, Snackbar } from "@mui/material";
 
 import { NavLink } from "../../GlobalStyles";
 import CloseIcon from "@mui/icons-material/Close";
+import { handleAddToCart } from "../../actions/cartAction";
 
-export const Product = ({ product }) => {
+export const Product = ({ product, dispatch }) => {
   const [open, setOpen] = useState(false);
 
   const AddToCart = () => {
     setOpen(true);
+    dispatch(handleAddToCart(product));
   };
 
   const handleClose = () => {
     setOpen(false);
   };
+
+  // console.log("Dispatch recieved");
+  // console.log(dispatch);
 
   const snackActions = (
     <ActionsContainer>

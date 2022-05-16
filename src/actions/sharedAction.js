@@ -1,4 +1,4 @@
-import { getInitialData, getPopularProducts } from "../utils/Api";
+import { getInitialData } from "../utils/Api";
 import { receiveProducts } from "../actions/productsAction";
 import { receiveUsers } from "../actions/usersAction";
 import { setAuthedUser } from "../actions/authedUserAction";
@@ -21,18 +21,6 @@ export function handleInitialData() {
       dispatch(receiveUsers(users));
       dispatch(setAuthedUser(AUTHED_ID));
       dispatch(hideLoading());
-    });
-  };
-}
-
-export function handleProductsData(productsType) {
-  return dispatch => {
-    //Getting the products data from api
-    return getPopularProducts(productsType).then(products => {
-      // console.log("check 2 ");
-      // console.log(products);
-      //Then with the reducer we put the data in the state
-      dispatch(receiveProducts(products));
     });
   };
 }

@@ -1,8 +1,8 @@
 import {
   _getUsers,
   _getPopularProducts,
-  _saveLikeToggle
-  //   _saveTweet
+  _saveLikeToggle,
+  _addToCart
 } from "./Data.js";
 
 export function getInitialData() {
@@ -21,10 +21,11 @@ export function getPopularProducts(productsType) {
   }));
 }
 
+export function addProductToCart(product) {
+  return Promise.resolve(_addToCart(product)).then(cartProducts => ({
+    cartProducts
+  }));
+}
 // export function saveLikeToggle(info) {
 //   return _saveLikeToggle(info);
 // }
-
-//   export function saveTweet (info) {
-//     return _saveTweet(info)
-//   }

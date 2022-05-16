@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { handleProductsData } from "../../actions/sharedAction";
+import { handleProductsData } from "../../actions/productsAction";
 import { emptyProducts } from "../../actions/productsAction";
 import { PaginatedItems } from "../UtilsComponent/PaginatedItems";
 
@@ -24,30 +24,38 @@ class ProductsContainer extends Component {
   render() {
     // console.log("Product Container Render");
 
-    const { products, useParams } = this.props;
+    const { products, useParams, dispatch } = this.props;
     const mockItemsLoading = 8; // Or something else
 
     // console.log("name from params");
     // console.log(useParams.name);
 
+    // console.log("Dispatch to send");
+    // console.log(dispatch);
     // console.log("products here2");
     // console.log(products);
     //If products defined then loading is finished
     return products
-      ? useParams.name //Then In the home page no pagination needed
-        ? <PaginatedItems productsPerPage={8} products={products} />
+      ? useParams.name //Then In the home page no pagination needed for popular products
+        ? <PaginatedItems
+            productsPerPage={8}
+            products={products}
+            dispatch={dispatch}
+          />
         : <div>
             <Title>POPULAR PRODUCTS</Title>
             <Container>
               {products &&
-                products.map((product, index) => <Product product={product} />)}
+                products.map((product, index) =>
+                  <Product key={index} product={product} dispatch={dispatch} />
+                )}
             </Container>
           </div>
       : <div>
           <Title>POPULAR PRODUCTS</Title>
           <Container>
             {[...Array(mockItemsLoading)].map((e, i) => {
-              return <Product product={null} />;
+              return <Product key={i} product={null} />;
             })}
           </Container>
         </div>;
@@ -57,7 +65,7 @@ class ProductsContainer extends Component {
 //Getting the products data from the state
 function mapStateToProps({ products }, props) {
   //the first products is the name of the reducer in the index file of reducers
-  //the second one is the array we put in the state with the reducer
+  //the second one is the array we put in the state with the action receiveProducts
   let productsArray = products.products;
   // console.log("Getting products from store");
   // console.log(Array.isArray(products.products));
