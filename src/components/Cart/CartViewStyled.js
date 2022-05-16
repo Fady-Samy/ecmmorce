@@ -23,7 +23,11 @@ export const GoTo = styled.a`
 
 export const ProductSummaryContainer = styled.div`display: flex;`;
 
-export const OrderProducts = styled.div`flex: 3;`;
+export const OrderProducts = styled.div`
+  flex: 3;
+  height: 85vh;
+  overflow: auto;
+`;
 
 export const Product = styled.div`
   display: flex;
@@ -102,7 +106,7 @@ export const OrderSummary = styled.div`
   border: 0.5px solid lightgray;
   border-radius: 10px;
   padding: 20px;
-  height: 45vh;
+  height: 80vh;
 `;
 
 export const SummaryTitle = styled.h1`

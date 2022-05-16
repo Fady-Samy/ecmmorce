@@ -1,5 +1,5 @@
 import React from "react";
-import { CartView } from "../components/Cart/CartView";
+import CartView from "../components/Cart/CartView";
 
 export const Cart = () => {
   return (
