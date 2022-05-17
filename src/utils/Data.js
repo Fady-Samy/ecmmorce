@@ -325,14 +325,41 @@ export function _getPopularProducts(productsType) {
 
 export function _addToCart(product, selectedColor, selectedSize, quantity) {
   return new Promise((res, rej) => {
+    let alreadyExist = false;
+    let index = null;
     setTimeout(() => {
-      let item = {
-        ...product,
-        selectedColor: selectedColor,
-        selectedSize: selectedSize,
-        quantity: quantity
-      };
-      cartItems.push(item);
+      //Cart is not empty
+      if (cartItems.length != 0) {
+        //product with same id
+        for (let i = 0; i < cartItems.length; i++) {
+          if (cartItems[i].id == product.id) {
+            //if Size and color are the same
+            if (
+              cartItems[i].selectedSize == selectedSize &&
+              cartItems[i].selectedColor == selectedColor
+            ) {
+              alreadyExist = true;
+              index = i;
+            }
+          }
+        }
+      }
+
+      if (alreadyExist) {
+        //Update only quantity
+        cartItems[index].quantity = cartItems[index].quantity + quantity;
+      } else {
+        //New item
+        //add the selected color, size, quantity to the product object (new object Item)
+        let item = {
+          ...product,
+          selectedColor: selectedColor,
+          selectedSize: selectedSize,
+          quantity: quantity
+        };
+        // Then add to cartItems
+        cartItems.push(item);
+      }
 
       //TODO: Add items to the logged user cart
       // users = {
