@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, useState } from "react";
 import { Add, Remove } from "@mui/icons-material";
 import {
   Button,
@@ -30,10 +30,10 @@ import {
 } from "./CartViewStyled";
 
 import { connect } from "react-redux";
+import { handleQuantityChange } from "../../actions/cartAction";
 class CartView extends Component {
   render() {
-    const { cartProducts } = this.props;
-
+    const { cartProductsLenght, cartProducts, dispatch } = this.props;
     return (
       <Container>
         <Title>YOUR BAG</Title>
@@ -43,9 +43,9 @@ class CartView extends Component {
           <GoTo>Your Wishlist (0)</GoTo>
         </FirstRow>
 
-        {cartProducts
+        {cartProductsLenght != 0
           ? //Bottom part
-            <CartProductItems cartProducts={cartProducts} />
+            <CartProductItems cartProducts={cartProducts} dispatch={dispatch} />
           : <h1>Cart Is Empty</h1>}
       </Container>
     );
@@ -55,16 +55,34 @@ class CartView extends Component {
 //Getting the cart data from the state
 function mapStateToProps({ cart }) {
   let cartProducts = cart.cartProducts;
+  //Added cartProductsLenght so that when we remove items from cart rerender the view as the length changes not only when cartProducts changes as object
   return {
+    cartProductsLenght: cartProducts.length,
     cartProducts: cartProducts
   };
 }
 
 export default connect(mapStateToProps)(CartView);
 
-export const CartProductItems = ({ cartProducts }) => {
+export const CartProductItems = ({ cartProducts, dispatch }) => {
   // const [subtotal, setSubtotal] = useState(0);
   let subTotal = 0;
+  const [quantity, setQuantity] = useState(1);
+  let newQuantity = null;
+
+  const handleQuantity = (type, productId, color, size, oldQuantity) => {
+    if (type === "add") {
+      newQuantity = oldQuantity + 1;
+      dispatch(handleQuantityChange(productId, color, size, newQuantity));
+      //to re-render componet
+      setQuantity(newQuantity);
+    } else {
+      newQuantity = oldQuantity - 1;
+
+      dispatch(handleQuantityChange(productId, color, size, newQuantity));
+      setQuantity(newQuantity);
+    }
+  };
 
   const summary = [
     {
@@ -113,13 +131,31 @@ export const CartProductItems = ({ cartProducts }) => {
                 <PriceDetails>
                   <ProductAmountContainer>
                     <Icon>
-                      <Remove />
+                      <Remove
+                        onClick={() =>
+                          handleQuantity(
+                            "remove",
+                            product.id,
+                            product.selectedColor,
+                            product.selectedSize,
+                            product.quantity
+                          )}
+                      />
                     </Icon>
                     <ProductAmount>
                       {product.quantity}
                     </ProductAmount>
                     <Icon>
-                      <Add />
+                      <Add
+                        onClick={() =>
+                          handleQuantity(
+                            "add",
+                            product.id,
+                            product.selectedColor,
+                            product.selectedSize,
+                            product.quantity
+                          )}
+                      />
                     </Icon>
                   </ProductAmountContainer>
                   <ProductPrice>

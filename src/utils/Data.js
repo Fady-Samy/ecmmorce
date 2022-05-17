@@ -293,9 +293,6 @@ let shirtsProducts = [
   }
 ];
 
-//Cart items
-let cartItems = [];
-
 export function _getUsers() {
   return new Promise((res, rej) => {
     setTimeout(() => res({ ...users }), 1000);
@@ -320,58 +317,6 @@ export function _getPopularProducts(productsType) {
         break;
     }
     // console.log(result);
-  });
-}
-
-export function _addToCart(product, selectedColor, selectedSize, quantity) {
-  return new Promise((res, rej) => {
-    let alreadyExist = false;
-    let index = null;
-    setTimeout(() => {
-      //Cart is not empty
-      if (cartItems.length != 0) {
-        //product with same id
-        for (let i = 0; i < cartItems.length; i++) {
-          if (cartItems[i].id == product.id) {
-            //if Size and color are the same
-            if (
-              cartItems[i].selectedSize == selectedSize &&
-              cartItems[i].selectedColor == selectedColor
-            ) {
-              alreadyExist = true;
-              index = i;
-            }
-          }
-        }
-      }
-
-      if (alreadyExist) {
-        //Update only quantity
-        cartItems[index].quantity = cartItems[index].quantity + quantity;
-      } else {
-        //New item
-        //add the selected color, size, quantity to the product object (new object Item)
-        let item = {
-          ...product,
-          selectedColor: selectedColor,
-          selectedSize: selectedSize,
-          quantity: quantity
-        };
-        // Then add to cartItems
-        cartItems.push(item);
-      }
-
-      //TODO: Add items to the logged user cart
-      // users = {
-      //   ...users,
-      //   [author]: {
-      //     ...users[author],
-      //     tweets: users[author].tweets.concat([formattedTweet.id])
-      //   }
-      // };
-
-      res(cartItems);
-    }, 1000);
   });
 }
 

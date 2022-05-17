@@ -21,18 +21,6 @@ export function getPopularProducts(productsType) {
   }));
 }
 
-export function addProductToCart(
-  product,
-  selectedColor,
-  selectedSize,
-  quantity
-) {
-  return Promise.resolve(
-    _addToCart(product, selectedColor, selectedSize, quantity)
-  ).then(cartProducts => ({
-    cartProducts
-  }));
-}
 // export function saveLikeToggle(info) {
 //   return _saveLikeToggle(info);
 // }
