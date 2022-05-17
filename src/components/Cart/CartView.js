@@ -26,7 +26,11 @@ import {
   SummaryItem,
   SummaryItemText,
   SummaryItemPrice,
-  SummaryTitle
+  SummaryTitle,
+  EmptyCartContainer,
+  EmptyTextDescription,
+  EmptyTextHeading,
+  EmptyImage
 } from "./CartViewStyled";
 
 import { connect } from "react-redux";
@@ -46,7 +50,13 @@ class CartView extends Component {
         {cartProductsLenght != 0
           ? //Bottom part
             <CartProductItems cartProducts={cartProducts} dispatch={dispatch} />
-          : <h1>Cart Is Empty</h1>}
+          : <EmptyCartContainer>
+              <EmptyImage src="https://www.webtoffee.com/wp-content/themes/webtoffee/assets/images/empty-cart.svg" />
+              <EmptyTextHeading>Your Cart Is Empty </EmptyTextHeading>
+              <EmptyTextDescription>
+                Browse products and add to cart to place an order{" "}
+              </EmptyTextDescription>
+            </EmptyCartContainer>}
       </Container>
     );
   }

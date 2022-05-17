@@ -125,3 +125,14 @@ export const SummaryItem = styled.div`
 export const SummaryItemText = styled.span``;
 
 export const SummaryItemPrice = styled.span``;
+
+export const EmptyCartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+export const EmptyImage = styled.img`height: 40vh;`;
+
+export const EmptyTextHeading = styled.p`font-weight: bold;`;
+
+export const EmptyTextDescription = styled.p`color: rgb(212, 211, 214);`;
