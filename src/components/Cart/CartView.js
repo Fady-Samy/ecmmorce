@@ -103,9 +103,9 @@ export const CartProductItems = ({ cartProducts }) => {
                     <ProductId>
                       <b>Id:</b> {product.id}
                     </ProductId>
-                    <ProductColor color="gray" />
+                    <ProductColor color={product.selectedColor} />
                     <ProductSize>
-                      <b>Size:</b> 37
+                      <b>Size:</b> {product.selectedSize}
                     </ProductSize>
                   </Details>
                 </ProductDetails>

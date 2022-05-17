@@ -69,14 +69,38 @@ export default connect(mapStateToProps)(ProductView);
 //Had to separate to use functional componet to use useState for the snackbar
 export const FuncProductView = ({ selectedProduct, dispatch }) => {
   const [open, setOpen] = useState(false);
+  const [selectedColor, setColor] = useState();
+  const [selectedSize, setSize] = useState();
+  const [missingData, setMissing] = useState(false);
+  const [horizontal, setHorizontal] = useState("right");
 
   const AddToCart = () => {
-    setOpen(true);
-    dispatch(handleAddToCart(selectedProduct));
+    if (!selectedColor || !selectedSize) {
+      setMissing(true);
+      setHorizontal("right");
+      setOpen(true);
+    } else {
+      setHorizontal("left");
+      setOpen(true);
+      dispatch(handleAddToCart(selectedProduct, selectedColor, selectedSize));
+    }
   };
 
+  //Close of snackbar
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const chooseColor = color => {
+    console.log("selected color");
+    console.log(color);
+    setColor(color);
+  };
+
+  const chooseSize = e => {
+    console.log("selected size");
+    console.log(e.target.value);
+    setSize(e.target.value);
   };
 
   const snackActions = (
@@ -109,15 +133,23 @@ export const FuncProductView = ({ selectedProduct, dispatch }) => {
           $ {selectedProduct.price}
         </Price>
         <FiltersContainer>
+          {/* Color Filter */}
           <Filter>
             <FilterText>Color</FilterText>
             {selectedProduct.colors.map((color, index) => {
-              return <FilterColor key={index} color={color} />;
+              return (
+                <FilterColor
+                  key={index}
+                  color={color}
+                  onClick={() => chooseColor(color)}
+                />
+              );
             })}
           </Filter>
+          {/* Size Filter */}
           <Filter>
             <FilterText>Size</FilterText>
-            <Select>
+            <Select onChange={chooseSize}>
               <Option selected disabled>
                 Size
               </Option>
@@ -145,22 +177,33 @@ export const FuncProductView = ({ selectedProduct, dispatch }) => {
           <AddButton onClick={AddToCart}>Add To Cart</AddButton>
         </AddToCartContainer>
       </ProductInfoContainer>
-      {/* Snackbar on adding product to cart */}
+      {/* Snackbar on adding product to cart/or error in case of not choosing size and color */}
       <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: horizontal }}
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
         // action={snackActions}
       >
-        <Alert
-          severity="success"
-          variant="filled"
-          elevation={6}
-          // onClose={handleClose}
-          action={snackActions}
-        >
-          item added to your cart
-        </Alert>
+        {missingData
+          ? <Alert
+              severity="error"
+              variant="filled"
+              elevation={6}
+              // onClose={handleClose}
+              // action={snackActions}
+            >
+              Please Select Color and Size
+            </Alert>
+          : <Alert
+              severity="success"
+              variant="filled"
+              elevation={6}
+              // onClose={handleClose}
+              action={snackActions}
+            >
+              item added to your cart
+            </Alert>}
       </Snackbar>
     </Container>
   );

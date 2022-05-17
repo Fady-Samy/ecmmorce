@@ -48,13 +48,21 @@ export const FilterText = styled.span`
   font-size: 20px;
   margin-right: 20px;
 `;
-export const FilterColor = styled.div`
-  width: 30px;
-  height: 30px;
+export const FilterColor = styled.button`
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
+  border: none;
   background-color: ${({ color }) => color};
   margin-right: 10px;
   cursor: pointer;
+
+  &:active {
+    content: "";
+
+    border: 2px solid #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+  }
 `;
 export const Select = styled.select`padding: 10px;`;
 

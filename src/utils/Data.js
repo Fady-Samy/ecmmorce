@@ -323,10 +323,15 @@ export function _getPopularProducts(productsType) {
   });
 }
 
-export function _addToCart(product) {
+export function _addToCart(product, selectedColor, selectedSize) {
   return new Promise((res, rej) => {
     setTimeout(() => {
-      cartItems.push(product);
+      let item = {
+        ...product,
+        selectedColor: selectedColor,
+        selectedSize: selectedSize
+      };
+      cartItems.push(item);
 
       //TODO: Add items to the logged user cart
       // users = {
