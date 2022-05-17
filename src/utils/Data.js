@@ -12,7 +12,7 @@ let users = {
 //Popular Products
 let popularProducts = [
   {
-    id: 1,
+    id: "ac17d145",
     name: "Life is good logo Tshirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -24,7 +24,7 @@ let popularProducts = [
     likes: ["user1"]
   },
   {
-    id: 2,
+    id: "5fc7d6f2",
     name: "Nike sport sneakers",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -36,7 +36,7 @@ let popularProducts = [
     likes: ["user1", "user1", "user1"]
   },
   {
-    id: 3,
+    id: "ae793f94",
     name: "Sea Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -48,7 +48,7 @@ let popularProducts = [
     likes: ["user1"]
   },
   {
-    id: 4,
+    id: "35ed4199",
     name: "Palm Trees Dress",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -60,7 +60,7 @@ let popularProducts = [
     likes: ["user1", "user1", "user1"]
   },
   {
-    id: 5,
+    id: "96445b73",
     name: "Hawaii bag",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -72,7 +72,7 @@ let popularProducts = [
     likes: ["user1"]
   },
   {
-    id: 6,
+    id: "e88a6df0",
     name: "Dog Hat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -84,7 +84,7 @@ let popularProducts = [
     likes: ["user1"]
   },
   {
-    id: 7,
+    id: "8911fde8",
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -96,7 +96,7 @@ let popularProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 8,
+    id: "b94d7fc3",
     name: "Long Jacket",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -112,7 +112,7 @@ let popularProducts = [
 //Shirts Category Products
 let shirtsProducts = [
   {
-    id: 1,
+    id: "ac17d145",
     name: "Life is good logo Tshirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -124,7 +124,7 @@ let shirtsProducts = [
     likes: ["user1"]
   },
   {
-    id: 2,
+    id: "4451e191",
     name: "Green Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -136,7 +136,7 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1"]
   },
   {
-    id: 3,
+    id: "ae793f94",
     name: "Sea Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -148,7 +148,7 @@ let shirtsProducts = [
     likes: ["user1"]
   },
   {
-    id: 4,
+    id: "64892001",
     name: "Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -160,7 +160,7 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1"]
   },
   {
-    id: 5,
+    id: "cdd2ad88",
     name: "Green Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -172,7 +172,7 @@ let shirtsProducts = [
     likes: ["user1"]
   },
   {
-    id: 6,
+    id: "8911fde8",
     name: "BlueWhite Squares",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
@@ -184,8 +184,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 7,
-    name: "BlueWhite Squares",
+    id: "153ef409",
+    name: "Cyan Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -196,8 +196,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 8,
-    name: "BlueWhite Squares",
+    id: "73856ae5",
+    name: "White Tshirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -208,8 +208,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 9,
-    name: "BlueWhite Squares",
+    id: "5a42a18e",
+    name: "RedBalck Squares Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -220,8 +220,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 10,
-    name: "BlueWhite Squares",
+    id: "d3c8acc5",
+    name: "White Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -232,8 +232,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 11,
-    name: "BlueWhite Squares",
+    id: "b1d1adcb",
+    name: "Dark blue squares Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -244,8 +244,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 12,
-    name: "BlueWhite Squares",
+    id: "adc5648e",
+    name: "Pterol Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -256,8 +256,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 13,
-    name: "BlueWhite Squares",
+    id: "c9cf1cb0",
+    name: "White Cyan Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -268,8 +268,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 14,
-    name: "BlueWhite Squares",
+    id: "1657dbf8",
+    name: "light blue shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
@@ -280,8 +280,8 @@ let shirtsProducts = [
     likes: ["user1", "user1", "user1", "user1"]
   },
   {
-    id: 15,
-    name: "BlueWhite Squares",
+    id: "91af357a",
+    name: "Black Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget tristique tortor pretium ut. Curabitur elit justo, consequat id condimentum ac, volutpat ornare.",
     price: 45,
