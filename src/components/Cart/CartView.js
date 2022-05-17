@@ -89,7 +89,7 @@ export const CartProductItems = ({ cartProducts }) => {
       {/* Info */}
       <OrderProducts>
         {cartProducts.map((product, inedx) => {
-          subTotal += product.price;
+          subTotal += product.price * product.quantity;
           return (
             <Fragment>
               <Product>
@@ -115,13 +115,15 @@ export const CartProductItems = ({ cartProducts }) => {
                     <Icon>
                       <Remove />
                     </Icon>
-                    <ProductAmount>1</ProductAmount>
+                    <ProductAmount>
+                      {product.quantity}
+                    </ProductAmount>
                     <Icon>
                       <Add />
                     </Icon>
                   </ProductAmountContainer>
                   <ProductPrice>
-                    ${product.price}
+                    ${product.price * product.quantity}
                   </ProductPrice>
                 </PriceDetails>
               </Product>

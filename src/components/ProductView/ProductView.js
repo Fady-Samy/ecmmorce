@@ -71,6 +71,7 @@ export const FuncProductView = ({ selectedProduct, dispatch }) => {
   const [open, setOpen] = useState(false);
   const [selectedColor, setColor] = useState();
   const [selectedSize, setSize] = useState();
+  const [quantity, setQuantity] = useState(1);
   const [missingData, setMissing] = useState(false);
   const [horizontal, setHorizontal] = useState("right");
 
@@ -82,7 +83,9 @@ export const FuncProductView = ({ selectedProduct, dispatch }) => {
     } else {
       setHorizontal("left");
       setOpen(true);
-      dispatch(handleAddToCart(selectedProduct, selectedColor, selectedSize));
+      dispatch(
+        handleAddToCart(selectedProduct, selectedColor, selectedSize, quantity)
+      );
     }
   };
 
@@ -92,15 +95,24 @@ export const FuncProductView = ({ selectedProduct, dispatch }) => {
   };
 
   const chooseColor = color => {
-    console.log("selected color");
-    console.log(color);
     setColor(color);
   };
 
   const chooseSize = e => {
-    console.log("selected size");
-    console.log(e.target.value);
     setSize(e.target.value);
+  };
+
+  const handleQuantity = type => {
+    if (type === "add") {
+      setQuantity(quantity + 1);
+    } else {
+      if (quantity != 1) {
+        setQuantity(quantity - 1);
+      }
+    }
+    // console.log("selected size");
+    // console.log(e.target.value);
+    // setSize(e.target.value);
   };
 
   const snackActions = (
@@ -167,11 +179,13 @@ export const FuncProductView = ({ selectedProduct, dispatch }) => {
         <AddToCartContainer>
           <QuantityContainer>
             <Icon>
-              <Remove />
+              <Remove onClick={() => handleQuantity("remove")} />
             </Icon>
-            <Quantity>1</Quantity>
+            <Quantity>
+              {quantity}
+            </Quantity>
             <Icon>
-              <Add />
+              <Add onClick={() => handleQuantity("add")} />
             </Icon>
           </QuantityContainer>
           <AddButton onClick={AddToCart}>Add To Cart</AddButton>

@@ -9,7 +9,12 @@ function addToCart(cartProducts) {
   };
 }
 
-export function handleAddToCart(product, selectedColor, selectedSize) {
+export function handleAddToCart(
+  product,
+  selectedColor,
+  selectedSize,
+  quantity
+) {
   return (dispatch, getState) => {
     // const { authedUser } = getState();
 
@@ -19,7 +24,8 @@ export function handleAddToCart(product, selectedColor, selectedSize) {
     return addProductToCart(
       product,
       selectedColor,
-      selectedSize
+      selectedSize,
+      quantity
     ).then(cartProducts => dispatch(addToCart(cartProducts)));
   };
 }

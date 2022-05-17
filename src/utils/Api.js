@@ -21,9 +21,14 @@ export function getPopularProducts(productsType) {
   }));
 }
 
-export function addProductToCart(product, selectedColor, selectedSize) {
+export function addProductToCart(
+  product,
+  selectedColor,
+  selectedSize,
+  quantity
+) {
   return Promise.resolve(
-    _addToCart(product, selectedColor, selectedSize)
+    _addToCart(product, selectedColor, selectedSize, quantity)
   ).then(cartProducts => ({
     cartProducts
   }));
